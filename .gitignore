@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+saved_models/
+*.pkl
+*.keras
+.venv/
+venv/
+.idea/
+.vscode/
