@@ -6,12 +6,12 @@ Multi-horizon EUR/USD direction classifier built with a **stacked Bidirectional 
 
 ## Highlights
 
-- **Multi-horizon targets** — predicts the direction of the close at 1-day and 5-day horizons simultaneously (multi-output sigmoid head)
-- **40+ engineered features** — returns & lags, rolling statistics, SMA/EMA crossovers, RSI, Stochastic, MACD, Bollinger Bands, ATR, ADX, momentum/ROC, plus **macro features** (Fed–ECB rate differential via FRED, VIX, DXY)
-- **Leak-free evaluation** — strict temporal train/val/test split, scaler fitted on train only, class balancing on train only
-- **Confidence-threshold trading** — trades are only taken when the predicted probability clears an optimized threshold, with the threshold tuned on the validation set
-- **Walk-forward validation** — rolling retrain/test windows to measure robustness across market regimes
-- **Trade timing analysis** — post-hoc study of when the strategy wins and loses
+- **Multi-horizon targets**: predicts the direction of the close at 1-day and 5-day horizons simultaneously (multi-output sigmoid head)
+- **40+ engineered features**: returns & lags, rolling statistics, SMA/EMA crossovers, RSI, Stochastic, MACD, Bollinger Bands, ATR, ADX, momentum/ROC, plus **macro features** (Fed vs. ECB rate differential via FRED, VIX, DXY)
+- **Leak-free evaluation**: strict temporal train/val/test split, scaler fitted on train only, class balancing on train only
+- **Confidence-threshold trading**: trades are only taken when the predicted probability clears an optimized threshold, with the threshold tuned on the validation set
+- **Walk-forward validation**: rolling retrain/test windows to measure robustness across market regimes
+- **Trade timing analysis**: post-hoc study of when the strategy wins and loses
 
 ![Trade timing analysis](docs/trade_timing_analysis.png)
 
@@ -47,8 +47,8 @@ pip install -r requirements.txt
 python main.py
 ```
 
-Data is downloaded automatically (EUR/USD, VIX, DXY from Yahoo Finance; interest rates from FRED) — no API key required.
+Data is downloaded automatically (EUR/USD, VIX, DXY from Yahoo Finance; interest rates from FRED). No API key required.
 
 ## Disclaimer
 
-Educational project (ESILV — Machine Learning). Not financial advice; past backtest performance does not guarantee future results.
+Educational project (ESILV, Machine Learning). Not financial advice; past backtest performance does not guarantee future results.
